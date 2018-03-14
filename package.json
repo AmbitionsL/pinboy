@@ -9,7 +9,7 @@
   },
   "dependencies": 
   {
-    "commando": "https://github.com/discordjs/Commando",
+    "commando": "discordjs/Commando",
     "request": "2.81.0"
   }
 }
