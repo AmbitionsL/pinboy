@@ -1,5 +1,8 @@
-const commando = require('discord.js-commando');
-const bot = new commando.Client();
+const Commando = require('discord.js-commando');
+const bot = new Commando.Client(
+  {
+    owner: '167516561328832512'
+  });
 
 bot.registry.registerGroup('random', 'Random');
 bot.registry.registerDefaults();
