@@ -1,4 +1,4 @@
-const Commando = require('discord.js-commando');
+const Commando = require('Commando');
 const bot = new Commando.Client(
   {
     owner: '167516561328832512'
