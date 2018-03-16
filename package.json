@@ -1,0 +1,15 @@
+{
+  "name": "pinboy",
+  "description": "dont worry about it",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": 
+  {
+    "start": "node index.js"
+  },
+  "dependencies": 
+  {
+    "Commando": "discordjs/Commando",
+    "request": "2.81.0"
+  }
+}
