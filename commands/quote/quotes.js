@@ -14,7 +14,7 @@ class QuotesCommand extends commando.Command
             args:
             [
                 {
-                    key: 'thequote',
+                    key: 'quote',
                     prompt: 'Please provide a quote.',
                     type: 'string'
                 }
@@ -22,8 +22,8 @@ class QuotesCommand extends commando.Command
         });
     }
 
-    run(msg, { thequote })
+    async run(msg, args)
     {
-        return msg.reply(thequote);
+        msg.reply(quote);
     }
 }
