@@ -1,16 +1,15 @@
 {
   "name": "pinboy",
-  "version": "1.0.0",
   "description": "dont worry about it",
+  "version": "0.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": 
+  {
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "me",
-  "license": "ISC",
-  "dependencies": {
-    "discord.io": "github:woor/discord.io#gateway_v6",
-    "winston": "^2.4.1"
+  "dependencies": 
+  {
+    "Commando": "discordjs/Commando",
+    "request": "2.81.0"
   }
 }
