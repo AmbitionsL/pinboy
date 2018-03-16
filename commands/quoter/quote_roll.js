@@ -24,9 +24,6 @@ class QuoteRollCommand extends Command
                         if (text.mentions.users) {
                             return true
                         }
-                        else if (text.content = "anonymous") {
-                            return true;
-                        }
                         else {
                             return 'Please provide a valid name.';
                         }
