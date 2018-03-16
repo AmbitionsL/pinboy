@@ -10,20 +10,20 @@ class QuotesCommand extends commando.Command
             group: 'quoter',
             memberName: 'quotes',
             description: "Saves quotes.",
-            examples: ['remind me to do this later'],
-            args:
-            [
-                {
-                    key: 'quote',
-                    prompt: 'Please provide a quote.',
-                    type: 'string'
-                }
-            ]
+            //examples: ['remind me to do this later'],
+            //args:
+            //[
+                //{
+                    //key: 'quote',
+                    //prompt: 'Please provide a quote.',
+                    //type: 'string'
+                //}
+            //]
         });
     }
 
     async run(msg, args)
     {
-        msg.reply(quote);
+        msg.reply(hi);
     }
 }
