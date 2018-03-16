@@ -5,11 +5,11 @@ class QuoteRollCommand extends commando.Command
     constructor(client)
     {
         super(client,
-            {
+        {
             name: 'quote',
             group: 'quoter',
             memberName: 'quote',
-            description: "Saves quotes.",
+            description: "Saves quotes."
             //examples: ['remind me to do this later'],
             //args:
             //[
