@@ -18,16 +18,8 @@ class QuoteRollCommand extends Command
                 },
                 {
                     key: 'name',
-                    prompt: 'Please provide a name.',
-                    type: 'user',
-                    //validate: text => {
-                        //if (text.mentions.users) {
-                            //return true
-                        //}
-                        //else {
-                            //return 'Please provide a valid name.';
-                        //}
-                    //}
+                    prompt: 'Please provide a user.',
+                    type: 'user'
                 }
             ]
         });
@@ -35,9 +27,7 @@ class QuoteRollCommand extends Command
 
     async run(message, { quote, name })
     {
-        var mention = name;
-        var nickname = mention.nickname;
-        message.reply('"' + quote + '" from ' + nickname + ' saved. :thumbup:');
+        message.reply('"' + quote + '" from ' + name + ' saved. :thumbup:');
     }
 }
 
