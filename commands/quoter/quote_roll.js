@@ -22,8 +22,8 @@ class QuoteRollCommand extends commando.Command
         });
     }
 
-    async run(msg, args)
+    async run(message, args)
     {
-        msg.reply(hi);
+        message.reply("hi");
     }
 }
