@@ -7,7 +7,7 @@ const bot = new Commando.Client(
 bot.registry
     .registerGroups([
         ['random', 'Random'],
-        ['quote', 'Quote']
+        ['quoter', 'Quoter']
     ])
     .registerDefaults()
     .registerCommandsIn(__dirname + "/commands");

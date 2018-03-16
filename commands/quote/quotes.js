@@ -7,14 +7,14 @@ class QuoteCommand extends commando.Command
         super(client,
             {
             name: 'quote',
-            group: 'quote',
+            group: 'quoter',
             memberName: 'quote',
             description: "Quotes things.",
             examples: ['remind me to do this later'],
             args:
             [
                 {
-                    key: 'quote',
+                    key: 'thequote',
                     prompt: 'Please provide a quote.',
                     type: 'string'
                 }
@@ -22,7 +22,7 @@ class QuoteCommand extends commando.Command
         });
     }
 
-    async run(msg, { quote })
+    async run(msg, { thequote })
     {
         msg.reply("'" + quote + "' saved as a quote.'")
     }
