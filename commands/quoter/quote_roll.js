@@ -1,29 +1,27 @@
-const commando = require('discord.js-commando');
+const { Command } = require('discord.js-commando');
 
-class QuoteRollCommand extends commando.Command
+class QuoteRollCommand extends Command
 {
     constructor(client)
     {
-        super(client,
-        {
+        super(client, {
             name: 'quote',
             group: 'quoter',
             memberName: 'quote',
-            description: "Saves quotes."
-            //examples: ['remind me to do this later'],
-            //args:
-            //[
-                //{
-                    //key: 'quote',
-                    //prompt: 'Please provide a quote.',
-                    //type: 'string'
-                //}
-            //]
+            description: "Saves quotes.",
+            examples: [ "remind me to do this later" ],
+            args: [ {
+                key: 'quote',
+                prompt: 'Please provide a quote.',
+                type: 'string'
+            } ]
         });
     }
 
     async run(message, args)
     {
-        message.reply("hi");
+        message.reply('"' + quote + '" saved. :thumbup:');
     }
 }
+
+module.exports = QuoteRollCommand;
