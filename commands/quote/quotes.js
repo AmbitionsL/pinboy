@@ -22,8 +22,8 @@ class QuoteCommand extends commando.Command
         });
     }
 
-    async run(msg, { thequote })
+    run(msg, { thequote })
     {
-        msg.reply("'" + quote + "' saved as a quote.'")
+        return msg.reply("'" + quote + "' saved as a quote.'")
     }
 }
