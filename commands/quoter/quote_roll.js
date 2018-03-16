@@ -20,14 +20,14 @@ class QuoteRollCommand extends Command
                     key: 'name',
                     prompt: 'Please provide a name.',
                     type: 'user',
-                    validate: text => {
-                        if (text.mentions.users) {
-                            return true
-                        }
-                        else {
-                            return 'Please provide a valid name.';
-                        }
-                    }
+                    //validate: text => {
+                        //if (text.mentions.users) {
+                            //return true
+                        //}
+                        //else {
+                            //return 'Please provide a valid name.';
+                        //}
+                    //}
                 }
             ]
         });
