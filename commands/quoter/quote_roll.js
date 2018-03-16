@@ -10,11 +10,29 @@ class QuoteRollCommand extends Command
             memberName: 'quote',
             description: "Saves quotes.",
             examples: [ "remind me to do this later" ],
-            args: [ {
-                key: 'quote',
-                prompt: 'Please provide a quote.',
-                type: 'string'
-            } ]
+            args: [
+                {
+                    key: 'quote',
+                    prompt: 'Please provide a quote.',
+                    type: 'string'
+                },
+                {
+                    key: 'name',
+                    prompt: 'Please provide a name.',
+                    type: 'user',
+                    validate: text => {
+                        if (text.mentions.users) {
+                            return true
+                        }
+                        else if (text.content = "anonymous") {
+                            return true;
+                        }
+                        else {
+                            return 'Please provide a valid name.';
+                        }
+                    }
+                }
+            ]
         });
     }
 
