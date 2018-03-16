@@ -9,7 +9,7 @@ class QuotesCommand extends commando.Command
             name: 'quotes',
             group: 'quoter',
             memberName: 'quotes',
-            description: "Quotes things.",
+            description: "Saves quotes.",
             examples: ['remind me to do this later'],
             args:
             [
@@ -24,6 +24,6 @@ class QuotesCommand extends commando.Command
 
     run(msg, { thequote })
     {
-        return msg.reply(thequote)
+        return msg.reply(thequote);
     }
 }
