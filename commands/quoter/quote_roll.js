@@ -35,7 +35,8 @@ class QuoteRollCommand extends Command
 
     async run(message, { quote, name })
     {
-        message.reply('"' + quote + '" from ' + name + ' saved. :thumbup:');
+        nickname = name.nickname;
+        message.reply('"' + quote + '" from ' + nickname + ' saved. :thumbup:');
     }
 }
 
