@@ -5,11 +5,13 @@ const bot = new Commando.Client(
   });
 
 bot.registry
+    .registerDefaultTypes()
     .registerGroups([
         ['random', 'Random'],
         ['quoter', 'Quoter']
     ])
-    .registerDefaults()
+    .registerDefaultGroups()
+    .registerDefaultCommands()
     .registerCommandsIn(__dirname + "/commands");
 
 bot.login(process.env.BOT_TOKEN);
