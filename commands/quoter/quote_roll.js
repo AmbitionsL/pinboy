@@ -1,14 +1,14 @@
 const commando = require('discord.js-commando');
 
-class QuotesCommand extends commando.Command
+class QuoteRollCommand extends commando.Command
 {
     constructor(client)
     {
         super(client,
             {
-            name: 'quotes',
+            name: 'quote',
             group: 'quoter',
-            memberName: 'quotes',
+            memberName: 'quote',
             description: "Saves quotes.",
             //examples: ['remind me to do this later'],
             //args:
