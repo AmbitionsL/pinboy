@@ -18,7 +18,7 @@ class QuoteRollCommand extends Command
         });
     }
 
-    async run(message, args)
+    async run(message, { quote })
     {
         message.reply('"' + quote + '" saved. :thumbup:');
     }
