@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('message', (message) => {
-    if (message.author.id = '167516561328832512') {
+    if (message.author = '167516561328832512') {
         var pinthis = message.id
         pinthis.pin();
     }
