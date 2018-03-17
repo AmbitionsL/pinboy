@@ -3,7 +3,8 @@ const client = new Discord.Client();
 
 client.on('message', (message) => {
     if (message.author.id = '167516561328832512') {
-        message.id.pin();
+
+        message.author.lastMessageId.pin();
     }
 });
 
