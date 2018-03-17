@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('message', (message) => {
-    if (sender.id = '167516561328832512') {
-        message.pin();
+    if (message.author.id = '167516561328832512') {
+        message.channel.lastmessage.pin();
     }
 });
 
