@@ -36,7 +36,7 @@ class QuoteRollCommand extends Command
     async run(message, { arg1, name, quote })
     {
         //fs.write()
-        if (arg1 = 'roll') {
+        if (arg1.content = 'roll') {
             if (!quote) {
                 if (!name) {
                     message.reply('This feature isn\'t fully implemented yet. I should be able to roll saved quotes sometime soon, though!')
