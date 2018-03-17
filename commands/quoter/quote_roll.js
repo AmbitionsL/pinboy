@@ -36,7 +36,7 @@ class QuoteRollCommand extends Command
     async run(message, { arg1, name, quote })
     {
         //fs.write()
-        if (arg1.content = 'roll') {
+        if (arg1 = 'roll') {
             if (!quote) {
                 if (!name) {
                     message.reply('This feature isn\'t fully implemented yet. I should be able to roll saved quotes sometime soon, though!')
@@ -46,7 +46,7 @@ class QuoteRollCommand extends Command
             } else {
                 message.reply('You\'re not supposed to use a quote alongside the roll argument.');
             }
-        } else if (arg1.content = 'save') {
+        } else if (arg1 = 'save') {
             if (!name) {
                 message.reply('I need a name when saving a quote.')
             } else {
