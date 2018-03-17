@@ -39,19 +39,19 @@ class QuoteRollCommand extends Command
         if (arg1 = 'roll') {
             if (!quote) {
                 if (!name) {
-                    message.reply('This feature isn\'t fully implemented yet. You should be able to roll saved quotes sometime soon, though!')
+                    message.reply('This feature isn\'t fully implemented yet. I should be able to roll saved quotes sometime soon, though!')
                 } else {
-                    message.reply('This feature isn\'t fully implemented yet. You should be able to roll saved quotes from ' + name + ' sometime soon, though!');
+                    message.reply('This feature isn\'t fully implemented yet. I should be able to roll saved quotes from ' + name + ' sometime soon, though!');
                 }
             } else {
-                message.reply('You\'re not supposed to use a quote alongside the roll argument, dumb dumb.');
+                message.reply('You\'re not supposed to use a quote alongside the roll argument.');
             }
         } else if (arg1.text = 'save') {
             if (!name) {
-                message.reply('You have to provide a name when saving a quote.')
+                message.reply('I need a name when saving a quote.')
             } else {
                 if (!quote) {
-                    message.reply('You have to provide a quote when saving a quote. Dumbass.')
+                    message.reply('I need a quote when saving a quote. Dumbass.')
                 } else {
                     message.reply('"' + quote + '" from ' + name + ' saved. :thumbup:');
                 }
