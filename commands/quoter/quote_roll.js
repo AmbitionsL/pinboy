@@ -46,7 +46,8 @@ class QuoteRollCommand extends Command
             } else {
                 message.reply('You\'re not supposed to use a quote alongside the roll argument.');
             }
-        } else if (arg1 = 'save') {
+        }
+        if (arg1 = 'save') {
             if (!name) {
                 message.reply('I need a name when saving a quote.')
             } else {
