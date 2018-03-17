@@ -1,3 +1,12 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+  client.on('message', message => {
+      if (message.member.id = '167516561328832512') {
+          message.pin();
+      }
+  });
+
 const Commando = require('discord.js-commando');
 const bot = new Commando.Client(
   {
