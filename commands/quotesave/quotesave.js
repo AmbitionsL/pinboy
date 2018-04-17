@@ -33,7 +33,7 @@ class QuoteSaveCommand extends commando.Command
     {
         var namSpc = user.username;
         var nam = namSpc.replace(' ', '_');
-        nam.push('quote');
+        //nam.push('quote');
         message.say('from variable: ' + namSpc.replace(' ', '_'));
         message.say('from username: ' + user.username.replace(' ', '_'));
 
