@@ -18,7 +18,8 @@ bot.registry
     .registerDefaultTypes()
     .registerGroups([
         ['random', 'Random'],
-        ['quoter', 'Quoter']
+        ['quoter', 'Quoter'],
+        ['isitgay', 'Isitgay']
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
