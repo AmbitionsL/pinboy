@@ -1,4 +1,4 @@
-var 167775955035750402 = [
+var brandon = [
     'Let\'s play Toon Town Online.',
     'You are mustard to me.'
 ]
