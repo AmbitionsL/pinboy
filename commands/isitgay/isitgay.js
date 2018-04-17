@@ -40,7 +40,7 @@ class IsItGayCommand extends Command
 
     async run(message, { thing })
     {
-        if (Math.floor(Math.random()*2) = 1) {
+        if ((Math.floor(Math.random()*2)) = 1) {
             if (!thing)
             {
                 message.say('It is, in fact, ' + gay[Math.floor(Math.random() * gay.length)])
