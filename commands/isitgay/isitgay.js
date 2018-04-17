@@ -1,9 +1,5 @@
 const { Command } = require('discord.js-commando');
 
-//function yesNo() {
-    //Math.floor(Math.random()*2+1);
-//}
-
 var gay = [
     'gay.',
     'super gay.',

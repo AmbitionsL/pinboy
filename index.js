@@ -18,7 +18,8 @@ bot.registry
     .registerDefaultTypes()
     .registerGroups([
         ['random', 'Random'],
-        ['quoter', 'Quoter'],
+        ['quoteroll', 'Quoteroll'],
+        ['quotesave', 'Quotesave'],
         ['isitgay', 'Isitgay'],
         ['hasadick', 'Hasadick'],
         ['isitepic', 'Isitepic']
