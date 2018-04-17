@@ -19,6 +19,8 @@ var gay = [
 
 var gayRand = Math.floor(Math.random() * gay.length);
 
+var randGay = gay[gayRand];
+
 class IsItGayCommand extends Command
 {
     constructor(client)
@@ -40,14 +42,14 @@ class IsItGayCommand extends Command
         });
     }
 
-    async run(gay, message, { thing })
+    async run(message, { thing })
     {
         if (yesNo == 1) {
             if (!thing)
             {
-                message.say('It is, in fact, ' + gay[gayRand])
+                message.say('It is, in fact, ' + randGay)
             } else {
-                message.say(thing + ' is, in fact, ' + gay[gayRand]);
+                message.say(thing + ' is, in fact, ' + randGay);
             }
         }
         if (yesNo == 2) {
@@ -62,13 +64,3 @@ class IsItGayCommand extends Command
 }
 
 module.exports = IsItGayCommand;
-
-//var thingGay = [
-    //' is, in fact, ',
-    //' is not, in fact, '
-//];
-
-//var noThingGay = [
-    //'It is, in fact, ',
-    //'It is not, in fact, '
-//];
