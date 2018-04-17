@@ -1,5 +1,6 @@
 const { Command } = require('discord.js-commando');
-//const fs = require('fs');
+const jamey = require('../quotesave/quotesave.js');
+const brandon = require('../quotesave/quotesave.js');
 
 class QuoteRollCommand extends Command
 {
@@ -35,29 +36,20 @@ class QuoteRollCommand extends Command
 
     async run(message, { arg1, name, quote })
     {
-        //fs.write()
-        //if (arg1 = 'roll') {
-            //if (!quote) {
-                if (!name) {
-                    message.reply('This feature isn\'t fully implemented yet. I should be able to roll saved quotes sometime soon, though!')
-                } else {
-                    message.reply('This feature isn\'t fully implemented yet. I should be able to roll saved quotes from ' + name + ' sometime soon, though!');
-                }
-            //} else {
-                //message.reply('You\'re not supposed to use a quote alongside the roll argument.');
-            //}
-        //}
-        //if (arg1 = 'save') {
-            //if (!name) {
-                //message.reply('I need a name when saving a quote.')
-            //} else {
-                //if (!quote) {
-                    //message.reply('I need a quote when saving a quote. Dumbass.')
-                //} else {
-                    //message.reply('"' + quote + '" from ' + name + ' saved. :thumbup:');
-                //}
-            //}
-        //}
+        var pplSel = Math.floor(Math.random()*2+1)
+        if (!name) {
+            if (pplSel = 1) {
+                message.reply('"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey')
+            } else if (pplSel = 2) {
+                message.reply('"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon')
+            }
+        } else {
+            if (name.id = 167516561328832512) {
+                message.reply('"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey')
+            } else if (name.id = 167775955035750402) {
+                message.reply('"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon')
+            }
+        }
     }
 }
 
