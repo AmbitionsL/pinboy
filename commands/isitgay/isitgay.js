@@ -1,8 +1,8 @@
 const { Command } = require('discord.js-commando');
 
-function yesNo() {
-    Math.floor(Math.random()*2+1);
-}
+//function yesNo() {
+    //Math.floor(Math.random()*2+1);
+//}
 
 var gay = [
     'gay.',
@@ -42,6 +42,8 @@ class IsItGayCommand extends Command
 
     async run(message, { thing })
     {
+        var yesNo = Math.floor(Math.random()*2+1);
+
         if (yesNo = 1) {
             if (!thing)
             {
