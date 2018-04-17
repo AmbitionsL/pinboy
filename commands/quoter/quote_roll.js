@@ -14,27 +14,16 @@ class QuoteRollCommand extends Command
             examples: [ "remind me to do this later" ],
             args: [
                 {
-                    key: 'arg1',
-                    prompt: 'Please choose to roll or save a quote.',
-                    type: 'string'
-                },
-                {
                     key: 'name',
                     prompt: 'Please provide a user.',
                     type: 'user',
-                    default: ''
-                },
-                {
-                    key: 'quote',
-                    prompt: 'Please provide a quote.',
-                    type: 'string',
                     default: ''
                 }
             ]
         });
     }
 
-    async run(message, { arg1, name, quote })
+    async run(message, { name })
     {
         var pplSel = Math.floor(Math.random()*2+1)
         if (!name) {
