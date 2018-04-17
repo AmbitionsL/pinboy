@@ -1,6 +1,6 @@
-var brandon = [
+var Flashfigure = [
     'Let\'s play Toon Town Online.',
     'You are mustard to me.'
 ]
 
-module.exports = brandon;
+module.exports = Flashfigure;
