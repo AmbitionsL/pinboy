@@ -1,12 +1,12 @@
 const { Command } = require('discord.js-commando');
 
-var yesNo = Math.floor(Math.random()*2);
+var yesNo = Math.floor(Math.random()*2+1);
 
 var gay = [
     'gay.',
-    'super-gay.',
-    'super-mega-gay.',
-    'super-mega-ultra-gay.',
+    'super gay.',
+    'super mega gay.',
+    'super mega ultra gay.',
     'double gay.',
     'triple gay.',
     'quadruple gay.',
@@ -40,7 +40,7 @@ class IsItGayCommand extends Command
 
     async run(message, { thing })
     {
-        if ((Math.floor(Math.random()*2)) = 1) {
+        if (yesNo = 1) {
             if (!thing)
             {
                 message.say('It is, in fact, ' + gay[Math.floor(Math.random() * gay.length)])
