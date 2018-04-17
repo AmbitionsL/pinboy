@@ -34,9 +34,9 @@ class QuoteRollCommand extends Command
                 message.reply('"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon')
             }
         } else {
-            if (name.id = 167516561328832512) {
+            if (name.id == 167516561328832512) {
                 message.reply('"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey')
-            } else if (name.id = 167775955035750402) {
+            } else if (name.id == 167775955035750402) {
                 message.reply('"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon')
             }
         }
