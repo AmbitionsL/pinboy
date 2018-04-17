@@ -17,6 +17,8 @@ var gay = [
     'a full on faggot.'
 ];
 
+var gayRand = Math.floor(Math.random()*gay.number);
+
 class IsItGayCommand extends Command
 {
     constructor(client)
@@ -43,9 +45,9 @@ class IsItGayCommand extends Command
         if (yesNo == 1) {
             if (!thing)
             {
-                message.say('It is, in fact, ' + gay)
+                message.say('It is, in fact, ' + gayRand)
             } else {
-                message.say(thing + ' is, in fact, ' + gay);
+                message.say(thing + ' is, in fact, ' + gayRand);
             }
         }
         if (yesNo == 2) {
