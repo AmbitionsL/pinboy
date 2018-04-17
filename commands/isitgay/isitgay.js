@@ -21,7 +21,7 @@ class IsItGayCommand extends Command
         });
     }
 
-    async run(gay, yesNo, message, { thing })
+    async run(message, { thing })
     {
         if (yesNo == 1) {
             if (!thing)
