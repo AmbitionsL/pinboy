@@ -26,10 +26,11 @@ class QuoteRollCommand extends Command
     async run(message, { name })
     {
         var pplSel = Math.floor(Math.random()*2+1)
+
         if (!name) {
-            if (pplSel = 1) {
+            if (pplSel == 1) {
                 message.reply('"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey')
-            } else if (pplSel = 2) {
+            } else if (pplSel == 2) {
                 message.reply('"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon')
             }
         } else {
