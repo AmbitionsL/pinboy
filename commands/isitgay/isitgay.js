@@ -17,12 +17,6 @@ var gay = [
     'a full on faggot.'
 ];
 
-var gayRand = Math.floor(Math.random() * gay.length);
-
-function randGay() {
-    gay[gayRand];
-}
-
 class IsItGayCommand extends Command
 {
     constructor(client)
@@ -46,7 +40,7 @@ class IsItGayCommand extends Command
 
     async run(message, { thing })
     {
-        if (yesNo == 1) {
+        if (yesNo = 1) {
             if (!thing)
             {
                 message.say('It is, in fact, ' + gay[Math.floor(Math.random() * gay.length)])
@@ -54,7 +48,7 @@ class IsItGayCommand extends Command
                 message.say(thing + ' is, in fact, ' + gay[Math.floor(Math.random() * gay.length)]);
             }
         }
-        if (yesNo == 2) {
+        if (yesNo = 2) {
             if (!thing)
             {
                 message.say('It is not, in fact, gay.')
