@@ -31,10 +31,11 @@ class QuoteSaveCommand extends commando.Command
 
     async run(message, { user, quote })
     {
-        //var arr = user.id
-        //arr.push('quote');
-        message.say(user.username);
-        message.reply('"' + quote + '" saved as a quote from ' + user + '. :thumbup:');
+        var namSpc = user.username
+        var nam = namSpc.replace(' ', '_')
+        nam.push('quote');
+
+        message.say('"' + quote + '" saved as a quote from ' + user.username + '. :thumbup:');
     }
 }
 
