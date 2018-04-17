@@ -13,7 +13,7 @@ var dick = [
     'have a little dick.',
     'sorta have a dick.',
     'kinda have a dick.',
-    'a full on long schlong.'
+    'have a full on long schlong.'
 ];
 
 class HasADickCommand extends Command
