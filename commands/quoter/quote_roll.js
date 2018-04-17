@@ -1,6 +1,6 @@
 const { Command } = require('discord.js-commando');
-const jamey = require('../quotesave/jamey.js');
-const brandon = require('../quotesave/brandon.js');
+const Sticky_Note = require('../quotesave/jamey.js');
+const Flashfigure = require('../quotesave/brandon.js');
 
 class QuoteRollCommand extends Command
 {
@@ -29,17 +29,18 @@ class QuoteRollCommand extends Command
 
         if (!name) {
             if (pplSel == 1) {
-                message.reply('"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey')
+                message.reply('"' + Sticky_Note[Math.floor(Math.random() * Sticky_Note.length)] + '" -Jamey')
             } else if (pplSel == 2) {
-                message.reply('"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon')
+                message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
             }
         } else {
             if (name.id == 167516561328832512) {
-                message.reply('"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey')
+                message.reply('"' + Sticky_Note[Math.floor(Math.random() * Sticky_Note.length)] + '" -Jamey')
             } else if (name.id == 167775955035750402) {
-                message.reply('"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon')
+                message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
             }
         }
+        message.say(Sticky_Note.length + Flashfigure.length);
     }
 }
 
