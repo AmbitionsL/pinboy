@@ -1,14 +1,5 @@
 const commando = require('discord.js-commando');
 
-var jamey = [
-    'I masturbate in public, I\'m exercising my freedom of speech.',
-    'Their anuses are too small.  I don\'t want to talk about this anymore.'
-]
-var brandon = [
-    'Let\'s play Toon Town Online.',
-    'You are mustard to me.'
-]
-
 class QuoteSaveCommand extends commando.Command
 {
     constructor(client)
@@ -43,6 +34,4 @@ class QuoteSaveCommand extends commando.Command
 }
 
 module
-    .exports = QuoteSaveCommand
-    .exports = jamey
-    .exports = brandon;
+    .exports = QuoteSaveCommand;
