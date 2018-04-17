@@ -40,7 +40,7 @@ class IsItGayCommand extends Command
         });
     }
 
-    async run(gay, gayRand, message, { thing })
+    async run(gayRand, message, { thing })
     {
         if (yesNo == 1) {
             if (!thing)
