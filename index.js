@@ -20,7 +20,8 @@ bot.registry
         ['random', 'Random'],
         ['quoter', 'Quoter'],
         ['isitgay', 'Isitgay'],
-        ['hasadick', 'Hasadick']
+        ['hasadick', 'Hasadick'],
+        ['isitepic', 'Isitepic']
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
