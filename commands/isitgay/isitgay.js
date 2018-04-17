@@ -17,7 +17,7 @@ var gay = [
     'a full on faggot.'
 ];
 
-var gayRand = Math.floor(Math.random()*gay.number);
+var gayRand = Math.floor(Math.random()*gay.length);
 
 class IsItGayCommand extends Command
 {
