@@ -19,7 +19,9 @@ var gay = [
 
 var gayRand = Math.floor(Math.random() * gay.length);
 
-var randGay = gay[gayRand];
+function randGay(maybe) {
+    maybe*gay[gayRand];
+}
 
 class IsItGayCommand extends Command
 {
@@ -47,9 +49,9 @@ class IsItGayCommand extends Command
         if (yesNo == 1) {
             if (!thing)
             {
-                message.say('It is, in fact, ' + randGay)
+                message.say('It is, in fact, ' + randGay(yesNo))
             } else {
-                message.say(thing + ' is, in fact, ' + randGay);
+                message.say(thing + ' is, in fact, ' + randGay(yesNo));
             }
         }
         if (yesNo == 2) {
