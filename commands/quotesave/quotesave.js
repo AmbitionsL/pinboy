@@ -36,7 +36,7 @@ class QuoteSaveCommand extends commando.Command
         //user.username.replace(' ', '_').push('quote');
         //message.say('from variable: ' + namSpc.replace(' ', '_'));
         //message.say('from username: ' + user.username.replace(' ', '_'));
-        Sticky_Note.push('quote');
+        Sticky_Note.push(quote);
 
         message.say('"' + quote + '" saved as a quote from ' + user.username + '.  :thumbup:');
     }
