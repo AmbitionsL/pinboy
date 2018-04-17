@@ -28,9 +28,11 @@ class QuoteSaveCommand extends commando.Command
             ]
         }) ;
     }
-
+    
     async run(message, { user, quote })
     {
+        var arr = user.id
+        arr.push('quote');
         message.reply('"' + quote + '" saved as a quote from ' + user + '. :thumbup:');
     }
 }
