@@ -45,9 +45,9 @@ class IsItGayCommand extends Command
         if (yesNo == 1) {
             if (!thing)
             {
-                message.say('It is, in fact, ' + gayRand)
+                message.say('It is, in fact, ' + gay[gayRand])
             } else {
-                message.say(thing + ' is, in fact, ' + gayRand);
+                message.say(thing + ' is, in fact, ' + gay[gayRand]);
             }
         }
         if (yesNo == 2) {
