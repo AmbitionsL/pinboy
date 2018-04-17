@@ -44,7 +44,7 @@ class IsItGayCommand extends Command
     {
         var yesNo = Math.floor(Math.random()*2+1);
 
-        if (yesNo = 1) {
+        if (yesNo == 1) {
             if (!thing)
             {
                 message.say('It is, in fact, ' + gay[Math.floor(Math.random() * gay.length)])
