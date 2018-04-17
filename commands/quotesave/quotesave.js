@@ -1,5 +1,4 @@
 const commando = require('discord.js-commando');
-const fs = require('fs');
 
 class QuoteSaveCommand extends commando.Command
 {
@@ -17,7 +16,7 @@ class QuoteSaveCommand extends commando.Command
                 {
                     key: 'user',
                     prompt: 'Please specify a user.',
-                    type: 'string'
+                    type: 'user'
                 },
                 {
                     key: 'quote',
@@ -30,7 +29,7 @@ class QuoteSaveCommand extends commando.Command
 
     async run(message, { user, quote })
     {
-        message.reply('Quote saved. :thumbup:');
+        message.reply('"' + quote + '" saved as a quote from ' + user + '. :thumbup:');
     }
 }
 
