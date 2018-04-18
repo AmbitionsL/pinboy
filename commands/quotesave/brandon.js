@@ -1,6 +1,3 @@
-var Flashfigure = [
-    'Let\'s play Toon Town Online.',
-    'You are mustard to me.'
-]
+var Flashfigure = ['Let\'s play Toon Town Online.', 'You are mustard to me.']
 
 module.exports = Flashfigure;

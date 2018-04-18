@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando');
+const fs = require('fs');
 const Sticky_Note = require('../quotesave/jamey.js');
 const Flashfigure = require('../quotesave/brandon.js');
 
@@ -31,16 +32,22 @@ class QuoteSaveCommand extends commando.Command
 
     async run(message, { user, quote })
     {
-        //var namSpc = user.username;
-        //var nam = namSpc.replace(' ', '_');
-        //user.username.replace(' ', '_').push('quote');
-        //message.say('from variable: ' + namSpc.replace(' ', '_'));
-        //message.say('from username: ' + user.username.replace(' ', '_'));
-        Sticky_Note.push(quote);
-
-        message.say('"' + quote + '" saved as a quote from ' + user.username + '.  :thumbup:');
+        fs.open('../quotesave/' + user.username.replace(' ', '_') + '.js', 'w', function(err, fd) {
+            if (err) {
+                message.say('Could not open ' + user.username.replace(' ', '_') + '.js: ' + err);
+            }
+            fs.write(fd, '\'' + quote
+                .replace('"', '')
+                .replace("'", "\\'")
+                .replace('.', '') + '.\', '
+                [20[null]], function(err) {
+                if (err) message.say('error writing ' + quote + ' in ' + user.username.replace(' ', '_') + '.js: ' + err);
+                fs.close(fd, function() {
+                    message.say('"' + quote + '" saved as a quote from ' + user.username + '.  :thumbup:');
+                });
+            });
+        });
     }
 }
 
-module
-    .exports = QuoteSaveCommand;
+module.exports = QuoteSaveCommand;
