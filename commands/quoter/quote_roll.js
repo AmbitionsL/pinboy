@@ -26,9 +26,9 @@ class QuoteRollCommand extends Command
     async run(message, { user })
     {
         var pplSel = Math.floor(Math.random()*2+1);
-        var rand = Math.floor(Math.random() * userScore.length);
         var userName = user.username;
         var userScore = userName.replace(' ', '_');
+        var rand = Math.floor(Math.random() * userScore.length);
 
         if (!user) {
             if (pplSel == 1) {
