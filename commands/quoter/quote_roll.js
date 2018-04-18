@@ -14,7 +14,7 @@ class QuoteRollCommand extends Command
             examples: [ "remind me to do this later" ],
             args: [
                 {
-                    key: 'name',
+                    key: 'user',
                     prompt: 'Please provide a user.',
                     type: 'user',
                     default: ''
@@ -23,24 +23,22 @@ class QuoteRollCommand extends Command
         });
     }
 
-    async run(message, { name })
+    async run(message, { user })
     {
-        var pplSel = Math.floor(Math.random()*2+1)
+        var pplSel = Math.floor(Math.random()*2+1);
+        var rand = Math.floor(Math.random() * userScore.length);
+        var userName = user.username;
+        var userScore = userName.replace(' ', '_');
 
-        if (!name) {
+        if (!user) {
             if (pplSel == 1) {
                 message.reply('"' + Sticky_Note[Math.floor(Math.random() * Sticky_Note.length)] + '" -Jamey')
             } else if (pplSel == 2) {
                 message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
             }
         } else {
-            if (name.id == 167516561328832512) {
-                message.reply('"' + Sticky_Note[Math.floor(Math.random() * Sticky_Note.length)] + '" -Jamey')
-            } else if (name.id == 167775955035750402) {
-                message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
-            }
+            message.say('"' + userScore[rand] + '" -' + userName);
         }
-        message.say(Sticky_Note.length + Flashfigure.length);
     }
 }
 
