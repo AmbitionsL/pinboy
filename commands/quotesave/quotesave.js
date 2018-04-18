@@ -32,18 +32,21 @@ class QuoteSaveCommand extends commando.Command
 
     async run(message, { user, quote })
     {
-        fs.open('../quotesave/' + user.username.replace(' ', '_') + '.js', 'w', function(err, fd) {
+        var userName = user.username
+        var userScore = userName.replace(' ', '_');
+
+        fs.open('../quotesave/' + userScore + '.js', 'w', function(err, fd) {
             if (err) {
-                message.say('Could not open ' + user.username.replace(' ', '_') + '.js: ' + err);
+                message.say('Could not open ' + userScore + '.js: ' + err);
             }
             fs.write(fd, '\'' + quote
                 .replace('"', '')
                 .replace("'", "\\'")
                 .replace('.', '') + '.\', '
                 [20[null]], function(err) {
-                if (err) message.say('error writing ' + quote + ' in ' + user.username.replace(' ', '_') + '.js: ' + err);
+                if (err) message.say('error writing ' + quote + ' in ' + userScore + '.js: ' + err);
                 fs.close(fd, function() {
-                    message.say('"' + quote + '" saved as a quote from ' + user.username + '.  :thumbup:');
+                    message.say('"' + quote + '" saved as a quote from ' + userName + '.  :thumbup:');
                 });
             });
         });
