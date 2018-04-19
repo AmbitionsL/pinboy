@@ -28,8 +28,8 @@ class QuoteRollCommand extends Command
         var pplSel = Math.floor(Math.random()*2+1);
         var userName = name.username;
         var arrayName = userName.replace(' ', '_');
-        var rand = Math.floor(Math.random() * Sticky_Note.length);
-        var arrayAccess = process [arrayName][rand];
+        var rand = Math.floor(Math.random() * process[arrayName].length);
+        var arrayAccess = process[arrayName][rand];
 
         if (!name) {
             if (pplSel == 1) {

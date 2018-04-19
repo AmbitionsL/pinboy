@@ -22,7 +22,8 @@ bot.registry
         ['quotesave', 'Quotesave'],
         ['isitgay', 'Isitgay'],
         ['hasadick', 'Hasadick'],
-        ['isitepic', 'Isitepic']
+        ['isitepic', 'Isitepic'],
+        ['god', 'God']
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
