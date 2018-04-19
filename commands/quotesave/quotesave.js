@@ -43,7 +43,7 @@ class QuoteSaveCommand extends commando.Command
                 .replace('"', '')
                 .replace("'", "\\'")
                 .replace('.', '') + '.\', '
-                [20[null]], function(err) {
+                [20[undefined]], function(err) {
                 if (err) message.say('error writing ' + quote + ' in ' + userScore + '.js: ' + err);
                 fs.close(fd, function() {
                     message.say('"' + quote + '" saved as a quote from ' + userName + '.  :thumbup:');
