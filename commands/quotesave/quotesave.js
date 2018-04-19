@@ -2,6 +2,7 @@ const commando = require('discord.js-commando');
 const fs = require('fs');
 const Sticky_Note = require('../quotesave/jamey.js');
 const Flashfigure = require('../quotesave/brandon.js');
+const getThis = require('../quotesave/jamey.js');
 
 class QuoteSaveCommand extends commando.Command
 {
@@ -34,22 +35,24 @@ class QuoteSaveCommand extends commando.Command
     {
         var userName = user.username
         var userScore = userName.replace(' ', '_');
+        
+        message.say(process[getThis][0];
 
-        fs.open('../quotesave/' + userScore + '.js', 'w', function(err, fd) {
-            if (err) {
-                message.say('Could not open ' + userScore + '.js: ' + err);
-            }
-            fs.write(fd, '\'' + quote
-                .replace('"', '')
-                .replace("'", "\\'")
-                .replace('.', '') + '.\', '
-                [20[undefined]], function(err) {
-                if (err) message.say('error writing ' + quote + ' in ' + userScore + '.js: ' + err);
-                fs.close(fd, function() {
-                    message.say('"' + quote + '" saved as a quote from ' + userName + '.  :thumbup:');
-                });
-            });
-        });
+        //fs.open('../quotesave/' + userScore + '.js', 'w', function(err, fd) {
+            //if (err) {
+                //message.say('Could not open ' + userScore + '.js: ' + err);
+            //}
+            //fs.write(fd, '\'' + quote
+                //.replace('"', '')
+                //.replace("'", "\\'")
+                //.replace('.', '') + '.\', '
+                //[20[undefined]], function(err) {
+                //if (err) message.say('error writing ' + quote + ' in ' + userScore + '.js: ' + err);
+                //fs.close(fd, function() {
+                    //message.say('"' + quote + '" saved as a quote from ' + userName + '.  :thumbup:');
+                //});
+            //});
+        //});
     }
 }
 
