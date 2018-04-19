@@ -36,7 +36,7 @@ class QuoteSaveCommand extends commando.Command
         var userName = user.username
         var userScore = userName.replace(' ', '_');
         
-        message.say(process[getThis][0];
+        message.say(process[getThis][0]);
 
         //fs.open('../quotesave/' + userScore + '.js', 'w', function(err, fd) {
             //if (err) {
