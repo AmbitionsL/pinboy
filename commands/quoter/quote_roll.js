@@ -1,6 +1,7 @@
 const { Command } = require('discord.js-commando');
-const Sticky_Note = require('../quotesave/jamey.js');
-const Flashfigure = require('../quotesave/brandon.js');
+const Sticky_Note = require('../quotesave/peoople.js');
+const Flashfigure = require('../quotesave/people.js');
+const people = require('../quotesave/people.js');
 
 class QuoteRollCommand extends Command
 {
@@ -38,7 +39,7 @@ class QuoteRollCommand extends Command
                 message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
             }
         } else {
-            message.say('"' + arrayAccess + '" -' + userName);
+            message.say('"' + people + '" -' + userName);
         }
     }
 }
