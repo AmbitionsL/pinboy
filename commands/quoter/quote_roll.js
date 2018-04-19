@@ -37,7 +37,8 @@ class QuoteRollCommand extends Command
                 message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
             }
         } else {
-            message.say('"' + process[ userScore ][rand] + '" -' + userName);
+            //message.say('"' + process[ userScore ][rand] + '" -' + userName);
+            message.say(userName + userScore);
         }
     }
 }
