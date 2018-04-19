@@ -30,7 +30,7 @@ class QuoteRollCommand extends Command
         var userNoScore = userName.replace(' ', '_');
         var rand = Math.floor(Math.random() * userNoScore.length);
 
-        if (!user) {
+        if (!name) {
             if (pplSel == 1) {
                 message.reply('"' + Sticky_Note[Math.floor(Math.random() * Sticky_Note.length)] + '" -Jamey')
             } else if (pplSel == 2) {
