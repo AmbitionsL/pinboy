@@ -41,7 +41,7 @@ class QuoteRollCommand extends Command
                 message.say(brandonRoll);
             }
         } else if (userId == 167516561328832512) {
-            message.say(jamey[Math.floor(Math.random() * jamey.length)]);
+            message.say(roll(jamey));
         } else if (userId == 167775955035750402) {
             message.say(brandonRoll);
         }
