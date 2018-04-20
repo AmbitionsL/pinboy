@@ -25,14 +25,10 @@ class QuoteRollCommand extends Command
 
     async run(message, { name })
     {
-        function roll(credit){
-            credit[Math.floor(Math.random() * credit.length)]
-        }
-
         var pplSel = Math.floor(Math.random()*3);
         var userId = name.id;
         var jameyRoll = '"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey';
-        var brandonRoll = '"' + roll(brandon) + '" -Brandon';
+        var brandonRoll = '"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon';
 
         if (!name) {
             if (pplSel == 1) {
@@ -45,7 +41,6 @@ class QuoteRollCommand extends Command
         } else if (userId == 167775955035750402) {
             message.say(brandonRoll);
         }
-    message.say(userId + ' ' + name.username.replace(' ', '_') + ' ' + jamey[0]);
     }
 }
 
