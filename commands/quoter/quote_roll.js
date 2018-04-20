@@ -31,7 +31,7 @@ class QuoteRollCommand extends Command
 
         var pplSel = Math.floor(Math.random()*3);
         var userId = name.id;
-        var jameyRoll = '"' + roll(jamey) + '" -Jamey';
+        var jameyRoll = '"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey';
         var brandonRoll = '"' + roll(brandon) + '" -Brandon';
 
         if (!name) {
@@ -41,7 +41,7 @@ class QuoteRollCommand extends Command
                 message.say(brandonRoll);
             }
         } else if (userId == 167516561328832512) {
-            message.say(roll('jamey'));
+            message.say(jameyRoll);
         } else if (userId == 167775955035750402) {
             message.say(brandonRoll);
         }
