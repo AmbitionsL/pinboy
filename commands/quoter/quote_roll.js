@@ -45,6 +45,7 @@ class QuoteRollCommand extends Command
         } else if (userName = brandon) {
             message.say(brandonRoll);
         }
+    message.say(userName);
     }
 }
 
