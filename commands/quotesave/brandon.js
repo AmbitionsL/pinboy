@@ -1,3 +1,3 @@
-var Flashfigure = ['Let\'s play Toon Town Online.', 'You are mustard to me.', 'Brandon'];
+var brandon = ['Let\'s play Toon Town Online.', 'You are mustard to me.'];
 
-module.exports = Flashfigure;
+module.exports = brandon;
