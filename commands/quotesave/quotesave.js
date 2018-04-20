@@ -2,7 +2,6 @@ const commando = require('discord.js-commando');
 const fs = require('fs');
 const jamey = require('../quotesave/jamey.js');
 const brandon = require('../quotesave/brandon.js');
-const getThis = require('../quotesave/jamey.js');
 
 class QuoteSaveCommand extends commando.Command
 {
@@ -35,8 +34,6 @@ class QuoteSaveCommand extends commando.Command
     {
         var userName = user.username
         var userScore = userName.replace(' ', '_');
-
-        message.say(process[getThis][0]);
 
         //fs.open('../quotesave/' + userScore + '.js', 'w', function(err, fd) {
             //if (err) {
