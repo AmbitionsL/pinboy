@@ -1,6 +1,6 @@
 const { Command } = require('discord.js-commando');
-const Sticky_Note = require('../quotesave/people.js');
-const Flashfigure = require('../quotesave/people.js');
+const Sticky_Note = require('../quotesave/jamey.js');
+const Flashfigure = require('../quotesave/brandon.js');
 //const people = require('../quotesave/people.js');
 
 class QuoteRollCommand extends Command
@@ -29,7 +29,7 @@ class QuoteRollCommand extends Command
         var pplSel = Math.floor(Math.random()*2+1);
         var userName = name.username;
         var arrayName = userName.replace(' ', '_');
-        var rand = Math.floor(Math.random() * process[people].length - 1);
+        var rand = Math.floor(Math.random() * process[arrayName].length - 1);
         var arrayAccess = process[arrayName][rand];
 
         if (!name) {
