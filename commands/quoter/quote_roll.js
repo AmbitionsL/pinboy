@@ -26,7 +26,7 @@ class QuoteRollCommand extends Command
     async run(message, { name })
     {
         function roll(credit){
-            process[credit][Math.floor(Math.random() * credit.length)]
+            credit[Math.floor(Math.random() * credit.length)]
         }
 
         var pplSel = Math.floor(Math.random()*3);
