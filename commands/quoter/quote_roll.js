@@ -45,7 +45,7 @@ class QuoteRollCommand extends Command
         } else if (userId == 167775955035750402) {
             message.say(brandonRoll);
         }
-    //message.say(userName);
+    message.say(userId + ' ' + name.username + ' ' + jamey[0]);
     }
 }
 
