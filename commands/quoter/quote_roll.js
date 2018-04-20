@@ -1,7 +1,7 @@
 const { Command } = require('discord.js-commando');
-const Sticky_Note = require('../quotesave/peoople.js');
+const Sticky_Note = require('../quotesave/people.js');
 const Flashfigure = require('../quotesave/people.js');
-const people = require('../quotesave/people.js');
+//const people = require('../quotesave/people.js');
 
 class QuoteRollCommand extends Command
 {
@@ -29,17 +29,17 @@ class QuoteRollCommand extends Command
         var pplSel = Math.floor(Math.random()*2+1);
         var userName = name.username;
         var arrayName = userName.replace(' ', '_');
-        var rand = Math.floor(Math.random() * process[people].length);
+        var rand = Math.floor(Math.random() * process[people].length - 1);
         var arrayAccess = process[arrayName][rand];
 
         if (!name) {
             if (pplSel == 1) {
-                message.reply('"' + Sticky_Note[Math.floor(Math.random() * Sticky_Note.length)] + '" -Jamey')
+                //message.reply('"' + Sticky_Note[Math.floor(Math.random() * Sticky_Note.length)] + '" -Jamey')
             } else if (pplSel == 2) {
-                message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
+                //message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
             }
         } else {
-            message.say('"' + process[people][rand] + '" -' + userName);
+            message.say('"' + process[arrayName][rand] + '" -' + process[arrayName][arrayName.length]);
         }
     }
 }
