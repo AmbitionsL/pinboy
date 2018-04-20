@@ -30,7 +30,7 @@ class QuoteRollCommand extends Command
         }
 
         var pplSel = Math.floor(Math.random()*3);
-        var userName = name.username;
+        var userId = name.id;
         var jameyRoll = '"' + roll(brandon) + '" -Jamey';
         var brandonRoll = '"' + roll(brandon) + '" -Brandon';
 
@@ -40,12 +40,12 @@ class QuoteRollCommand extends Command
             } else if (pplSel == 2) {
                 message.say(brandonRoll);
             }
-        } else if (userName == Sticky_Note) {
+        } else if (userId == 167516561328832512) {
             message.say(jameyRoll);
-        } else if (userName == Flashfigure) {
+        } else if (userId == 167775955035750402) {
             message.say(brandonRoll);
         }
-    message.say(userName);
+    //message.say(userName);
     }
 }
 
