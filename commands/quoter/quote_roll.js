@@ -31,7 +31,7 @@ class QuoteRollCommand extends Command
 
         var pplSel = Math.floor(Math.random()*3);
         var userId = name.id;
-        var jameyRoll = '"' + roll(jamey) + '" -Jamey';
+        var jameyRoll = '"' + roll(name.username.replace(' ', '_')) + '" -Jamey';
         var brandonRoll = '"' + roll(brandon) + '" -Brandon';
 
         if (!name) {
