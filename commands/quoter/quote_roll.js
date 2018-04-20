@@ -29,8 +29,8 @@ class QuoteRollCommand extends Command
         var pplSel = Math.floor(Math.random()*2+1);
         var userName = name.username;
         var arrayName = userName.replace(' ', '_');
-        var rand = Math.floor(Math.random() * process[arrayName].length - 1);
-        var arrayAccess = process[arrayName][rand];
+        //var rand = Math.floor(Math.random() * process[arrayName].length - 1);
+        //var arrayAccess = process[arrayName][rand];
 
         if (!name) {
             if (pplSel == 1) {
@@ -39,7 +39,8 @@ class QuoteRollCommand extends Command
                 //message.reply('"' + Flashfigure[Math.floor(Math.random() * Flashfigure.length)] + '" -Brandon')
             }
         } else {
-            message.say('"' + process[arrayName][rand] + '" -' + process[arrayName][process[arrayName].length]);
+            //message.say('"' + process[arrayName][rand] + '" -' + process[arrayName][process[arrayName].length]);
+            message.say(process[arrayName][0]);
         }
     }
 }
