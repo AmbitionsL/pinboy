@@ -40,9 +40,9 @@ class QuoteRollCommand extends Command
             } else if (pplSel == 2) {
                 message.say(brandonRoll);
             }
-        } else if (userName = jamey) {
+        } else if (userName = Sticky_Note) {
             message.say(jameyRoll);
-        } else if (userName = brandon) {
+        } else if (userName = Flashfigure) {
             message.say(brandonRoll);
         }
     message.say(userName);
