@@ -1,7 +1,9 @@
 const commando = require('discord.js-commando');
 const fs = require('fs');
 const jamey = require('../quotesave/people/jamey.js');
+const jameyId = require('../quotesave/people/jamey.js');
 const brandon = require('../quotesave/people/brandon.js');
+const brandonId = require('../quotesave/people/brandon.js')
 
 class QuoteSaveCommand extends commando.Command
 {
@@ -13,11 +15,11 @@ class QuoteSaveCommand extends commando.Command
             group: 'quotesave',
             memberName: 'quotesave',
             description: 'Saves quotes to later be rolled using the !quoteroll command.',
-            examples: ['!quotesave @user And then he put his dick in me. -User']
-                ['!quotesave @user "And then he put his dick in me." -User'],
+            examples: ['!quotesave @user Something someone said.']
+                ['!quotesave @user "Something someone said."'],
             args: [
                 {
-                    key: 'user',
+                    key: 'name',
                     prompt: 'Please specify a user.',
                     type: 'user'
                 },
@@ -30,26 +32,26 @@ class QuoteSaveCommand extends commando.Command
         }) ;
     }
 
-    async run(message, { user, quote })
+    async run(message, { name, quote })
     {
-        var userName = user.username
-        var userScore = userName.replace(' ', '_');
+        var userId = name.id;
 
-        //fs.open('../quotesave/' + userScore + '.js', 'w', function(err, fd) {
-            //if (err) {
-                //message.say('Could not open ' + userScore + '.js: ' + err);
-            //}
-            //fs.write(fd, '\'' + quote
-                //.replace('"', '')
-                //.replace("'", "\\'")
-                //.replace('.', '') + '.\', '
-                //[20[undefined]], function(err) {
-                //if (err) message.say('error writing ' + quote + ' in ' + userScore + '.js: ' + err);
-                //fs.close(fd, function() {
-                    //message.say('"' + quote + '" saved as a quote from ' + userName + '.  :thumbup:');
-                //});
-            //});
-        //});
+        if (name.id == jameyId) {
+            fs.open('../quotesave/people' + userScore + '.js', 'w', function(err, fd) {
+                if (err) {
+                    message.say('Could not open ' + userScore + '.js: ' + err);
+                }
+                fs.write(fd, '\''+ quote.replace('"', '').replace("'", "\\'").replace('.', '') + '.\', '
+                    [13[undefined]], function(err) {
+                        if (err) {
+                            message.say('error writing ' + quote + ' in ' + userScore + '.js: ' + err);
+                        }
+                        fs.close(fd, function() {
+                            message.say('"' + quote + '" saved as a quote from ' + userName + '.  :thumbup:');
+                        });
+                    });
+                });
+            }
     }
 }
 

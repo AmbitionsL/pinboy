@@ -1,6 +1,8 @@
 const { Command } = require('discord.js-commando');
 const jamey = require('../quotesave/people/jamey.js');
+const jameyId = require('../quotesave/people/jamey.js');
 const brandon = require('../quotesave/people/brandon.js');
+const brandonId = require('../quotesave/people/brandon.js')
 
 class QuoteRollCommand extends Command
 {
