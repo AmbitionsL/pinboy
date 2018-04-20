@@ -1,7 +1,7 @@
 const commando = require('discord.js-commando');
 const fs = require('fs');
-const jamey = require('../quotesave/jamey.js');
-const brandon = require('../quotesave/brandon.js');
+const jamey = require('../quotesave/people/jamey.js');
+const brandon = require('../quotesave/people/brandon.js');
 
 class QuoteSaveCommand extends commando.Command
 {
