@@ -39,14 +39,14 @@ class QuoteSaveCommand extends commando.Command
         if (name.id == jameyId) {
             fs.open('../quotesave/peoplejamey.js', 'w', function(err, fd) {
                 if (err) {
-                    message.say('Could not open ' + jamey + '.js: ' + err);
+                    message.say('Could not open jamey.js: ' + err);
                 } else if (!err) {
                     message.say('Successfully opened jamey.js.');
                 }
                 fs.write(fd, '\''+ quote.replace('"', '').replace("'", "\\'").replace('.', '') + '.\', '
                     [13[undefined]], function(err) {
                         if (err) {
-                            message.say('error writing ' + quote + ' in ' + jamey + '.js: ' + err);
+                            message.say('error writing in jamey.js: ' + err);
                         } else if (!err) {
                             message.say('Successfully wrote to jamey.js.');
                         }
