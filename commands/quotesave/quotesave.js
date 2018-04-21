@@ -35,17 +35,18 @@ class QuoteSaveCommand extends commando.Command
     async run(message, { name, quote })
     {
         var userId = name.id;
+        let path = '../quotesave/people/' + name + '.js';
+        let buffer = new Buffer('\'' + quote.replace('"', '').replace("'", "\\'").replace('.', '') + '.\', ');
 
         if (userId == jameyId) {
             message.say('yay');
-            fs.open('../quotesave/peoplejamey.js', 'w', function(err, fd) {
+            fs.open(path, 'w', function(err, fd) {
                 if (err) {
                     message.say('Could not open jamey.js: ' + err);
                 } else if (!err) {
                     message.say('Successfully opened jamey.js.');
                 }
-                fs.write(fd, '\''+ quote.replace('"', '').replace("'", "\\'").replace('.', '') + '.\', '
-                    [13[undefined]], function(err) {
+                fs.write(fd, buffer, 0, buffer.length, 13, function(err) {
                         if (err) {
                             message.say('error writing in jamey.js: ' + err);
                         } else if (!err) {
@@ -54,9 +55,9 @@ class QuoteSaveCommand extends commando.Command
                         fs.close(fd, function() {
                             message.say('"' + quote + '" saved as a quote from Jamey.  :thumbup:');
                         });
-                    });
                 });
-            }
+            });
+        }
     }
 }
 
