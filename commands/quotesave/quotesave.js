@@ -37,6 +37,7 @@ class QuoteSaveCommand extends commando.Command
         var userId = name.id;
 
         if (name.id == jameyId) {
+            message.say('yay');
             fs.open('../quotesave/peoplejamey.js', 'w', function(err, fd) {
                 if (err) {
                     message.say('Could not open jamey.js: ' + err);
