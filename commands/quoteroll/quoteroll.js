@@ -2,7 +2,9 @@ const { Command } = require('discord.js-commando');
 const jamey = require('../quotesave/people/jamey.js');
 const jameyId = require('../quotesave/people/jamey.js');
 const brandon = require('../quotesave/people/brandon.js');
-const brandonId = require('../quotesave/people/brandon.js')
+const brandonId = require('../quotesave/people/brandon.js');
+const aidanb = require('../quotesave/people/aidanb.js');
+const aidanbId = require('../quotesave/people/aidanb.js');
 
 class QuoteRollCommand extends Command
 {
@@ -31,17 +33,22 @@ class QuoteRollCommand extends Command
         var userId = name.id;
         var jameyRoll = '"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey';
         var brandonRoll = '"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon';
+        var aidanbRoll = '"' + aidanb[Math.floor(Math.random() * brandon.length)] + '" -Aidan B.';
 
         if (!name) {
             if (pplSel == 1) {
                 message.say(jameyRoll);
             } else if (pplSel == 2) {
                 message.say(brandonRoll);
+            } else if (pplSel == 0) {
+                message.say(aidanbRoll);
             }
         } else if (userId == 167516561328832512) {
             message.say(jameyRoll);
         } else if (userId == 167775955035750402) {
             message.say(brandonRoll);
+        } else if (userId == 297885249382252544) {
+            message.say(aidanbRoll);
         }
     }
 }
