@@ -31,9 +31,12 @@ class QuoteRollCommand extends Command
     {
         var pplSel = Math.floor(Math.random()*3);
         var userId = name.id;
-        var jameyRoll = '"' + jamey[Math.floor(Math.random() * jamey.length)] + '" -Jamey';
-        var brandonRoll = '"' + brandon[Math.floor(Math.random() * brandon.length)] + '" -Brandon';
-        var aidanbRoll = '"' + aidanb[Math.floor(Math.random() * brandon.length)] + '" -Aidan B.';
+        var jameyRand = Math.floor(Math.random() * jamey.length);
+        var brandonRand = Math.floor(Math.random() * brandon.length);
+        var aidanbRand = Math.floor(Math.random() * brandon.length);
+        var jameyRoll = '"' + jamey[jameyRand] + '" -Jamey';
+        var brandonRoll = '"' + brandon[brandonRand] + '" -Brandon';
+        var aidanbRoll = '"' + aidanb[aidanbRand] + '" -Aidan B.';
 
         if (!name) {
             if (pplSel == 1) {
