@@ -23,7 +23,8 @@ bot.registry
         ['isitgay', 'Isitgay'],
         ['hasadick', 'Hasadick'],
         ['isitepic', 'Isitepic'],
-        ['god', 'God']
+        ['god', 'God'],
+        ['bedtime', 'Bedtime']
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
