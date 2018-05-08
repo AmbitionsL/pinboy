@@ -1,6 +1,6 @@
-const commando = require('discord.js-commando');
+const { Command } = require('discord.js-commando');
 
-class BedTimeCommand extends commando.Command {
+class BedTimeCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'bedtime',
@@ -30,4 +30,4 @@ class BedTimeCommand extends commando.Command {
     }
 }
 
-module.exports = BedTimeCommand
+module.exports = BedTimeCommand;
