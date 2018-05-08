@@ -20,7 +20,7 @@ class BedTimeCommand extends Command {
 
     async run(message, { name }) {
         if (!name) {
-            message.say({
+            message.say('', {
                 file: 'https://cdn.discordapp.com/attachments/206481430665101312/443260144328114176/image.jpg'
             });
         } else {
