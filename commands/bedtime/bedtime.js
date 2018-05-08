@@ -17,13 +17,13 @@ class BedTimeCommand extends Command {
         });
     }
 
-    async run(message, args) {
+    async run(message, { name }) {
         if (!user) {
             message.say({
                 file: 'https://cdn.discordapp.com/attachments/206481430665101312/443260144328114176/image.jpg'
             });
         } else {
-            message.say('It\'s time for bed, ' + user, {
+            message.say('It\'s time for bed, ' + name, {
                 file: 'https://cdn.discordapp.com/attachments/206481430665101312/443260144328114176/image.jpg'
             });
         }
