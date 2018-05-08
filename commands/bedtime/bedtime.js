@@ -10,6 +10,7 @@ class BedTimeCommand extends Command {
             args: [
                 {
                     key: 'name',
+                    prompt: '',
                     type: 'user',
                     default: ''
                 }
