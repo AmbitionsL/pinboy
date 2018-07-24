@@ -14,13 +14,13 @@ class DiceRollCommand extends commando.Command
                 {
                     key: 'rollNumber',
                     prompt: '',
-                    type: 'int',
+                    type: 'integer',
                     default: ''
                 },
                 {
                     key: 'diceNumber',
                     prompt: '',
-                    type: 'int',
+                    type: 'integer',
                     default: '1'
                 }
             ]
