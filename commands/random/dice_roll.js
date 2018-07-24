@@ -34,7 +34,7 @@ class DiceRollCommand extends commando.Command
             message.reply("you rolled " + roll + ".");
         } else {
             var roll = Math.floor(Math.random() * rollNumber) + 1;
-            double amountOfDie = 0;
+            var int amountOfDie = 0;
             
             while (amountOfDie < diceNumber) {
                 message.reply("you rolled " + roll + ".");
