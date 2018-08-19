@@ -29,7 +29,7 @@ class DiceRollCommand extends commando.Command
         });
     }
 
-    async run(message, { rollNumber }, { diceNumber })
+    async run(message, { rollNumber, diceNumber })
     {
         amountOfDie = 0;
         while (amountOfDie < diceNumber) {
