@@ -17,7 +17,7 @@ class DiceRollCommand extends commando.Command
                     key: 'rollNumber',
                     prompt: 'i',
                     type: 'integer',
-                    default: ''
+                    default: '6'
                 },
                 {
                     key: 'diceNumber',
@@ -31,17 +31,11 @@ class DiceRollCommand extends commando.Command
 
     async run(message, args)
     {
-        if ((!rollNumber) && (diceNumber == 1)) {
-            roll = Math.floor(Math.random() * 20) + 1;
-            message.reply("you rolled " + roll + ".");
-        } else {
+        amountOfDie = 0;
+        while (amountOfDie < diceNumber) {
             roll = Math.floor(Math.random() * rollNumber) + 1;
-            amountOfDie = 0;
-
-            while (amountOfDie < diceNumber) {
-                message.reply("you rolled " + roll + ".");
-                amountOfDie += 1;
-            }
+            message.reply(roll);
+            amountOfDie += 1;
         }
     }
 }
