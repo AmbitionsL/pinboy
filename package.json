@@ -10,5 +10,16 @@
     "discord.js": "^11.3.2",
     "discord.js-commando": "^0.9.0",
     "request": "2.81.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmbitionsL/pinboy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmbitionsL/pinboy/issues"
+  },
+  "homepage": "https://github.com/AmbitionsL/pinboy#readme"
 }

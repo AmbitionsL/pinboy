@@ -1,5 +1,7 @@
 const commando = require('discord.js-commando');
 
+var amountOfDie;
+
 class DiceRollCommand extends commando.Command
 {
     constructor(client)
@@ -30,12 +32,12 @@ class DiceRollCommand extends commando.Command
     async run(message, args)
     {
         if ((!rollNumber) && (diceNumber == 1)) {
-            var roll = Math.floor(Math.random() * 20) + 1;
+            roll = Math.floor(Math.random() * 20) + 1;
             message.reply("you rolled " + roll + ".");
         } else {
-            var roll = Math.floor(Math.random() * rollNumber) + 1;
-            var int amountOfDie = 0;
-            
+            roll = Math.floor(Math.random() * rollNumber) + 1;
+            amountOfDie = 0;
+
             while (amountOfDie < diceNumber) {
                 message.reply("you rolled " + roll + ".");
                 amountOfDie += 1;
