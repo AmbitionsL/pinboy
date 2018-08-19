@@ -26,10 +26,10 @@ class DiceRollCommand extends commando.Command
                     default: '1'
                 }
             ]
-        }) ;
+        });
     }
 
-    async run(message, args)
+    async run(message, { rollNumber }, { diceNumber })
     {
         amountOfDie = 0;
         while (amountOfDie < diceNumber) {
