@@ -18,7 +18,7 @@ class DiceRollCommand extends commando.Command
                     key: 'rollNumber',
                     prompt: 'i',
                     type: 'integer',
-                    default: '6'
+                    default: '20'
                 },
                 {
                     key: 'diceNumber',
