@@ -1,6 +1,7 @@
 const commando = require('discord.js-commando');
 
 var amountOfDie;
+var roll;
 
 class DiceRollCommand extends commando.Command
 {
